@@ -24,3 +24,8 @@ void lvgl_ui_start(void)
 
     lv_timer_create(ui_step_timer_cb, UI_STEP_PERIOD_MS, NULL);
 }
+
+void lvgl_ui_notify_button(void)
+{
+    ui_update_cmd(UI_UPDATE_BUTTON, NULL);
+}
